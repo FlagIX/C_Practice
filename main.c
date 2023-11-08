@@ -1,5 +1,4 @@
 #include "stdio.h"
-#include<math.h>
 
 void question3_2()
 {
@@ -35,6 +34,7 @@ void question3_3()
     printf("%lf", deposit);
 }
 
+#include<math.h>
 void question3_4()
 {
     int a, b, c;
@@ -43,9 +43,35 @@ void question3_4()
     printf("%lf, %lf", (-b + s) / (2 * a), (-b - s) / (2 * a));
 }
 
+#define PI 3.1415926
+void question3_5()
+{
+    int r;
+    scanf_s("%d", &r);
+    // 体积V=(4/3)πr^3
+    double v = (4.0 / 3.0) * PI * r * r * r;
+    // 表面积S=4πr^2
+    double s = 4.0 * PI * r * r;
+    printf("v=%lf, s=%lf", v, s);
+}
+
+void question3_5_2()
+{
+    const double const_PI = 3.1415926;
+    int r;
+    scanf_s("%d", &r);
+    // 体积V=(4/3)πr^3
+    double v = (4.0 / 3.0) * const_PI * r * r * r;
+    // 表面积S=4πr^2
+    double s = 4.0 * const_PI * r * r;
+    printf("v=%lf, s=%lf", v, s);
+}
+
 int main()
 {
 //    question3_2();
 //    question3_3();
-    question3_4();
+//    question3_4();
+    question3_5();
+//    question3_5_2();
 }
