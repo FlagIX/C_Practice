@@ -27,15 +27,26 @@ void question3_3()
     int n = 0;
     scanf_s("%lf%d", &capital, &n);
     double tmp = 1;
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
+    {
         tmp *= rate + 1;
     }
     deposit = capital * tmp;
     printf("%lf", deposit);
 }
 
+void question3_4()
+{
+    int a, b, c;
+    scanf_s("%d%d%d", &a, &b, &c);
+    double d = b * b - 4 * a * c;
+    double s = sqrt(d);
+    printf("%lf, %lf", (-b + s) / (2 * a), (-b - s) / (2 * a));
+}
+
 int main()
 {
 //    question3_2();
-    question3_3();
+//    question3_3();
+    question3_4();
 }
