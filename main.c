@@ -39,8 +39,7 @@ void question3_4()
 {
     int a, b, c;
     scanf_s("%d%d%d", &a, &b, &c);
-    double d = b * b - 4 * a * c;
-    double s = sqrt(d);
+    double s = sqrt(b * b - 4 * a * c);
     printf("%lf, %lf", (-b + s) / (2 * a), (-b - s) / (2 * a));
 }
 
