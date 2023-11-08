@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include<math.h>
 
 void question3_2()
 {
@@ -27,8 +28,7 @@ void question3_3()
     scanf_s("%lf%d", &capital, &n);
     double tmp = 1;
     for (int i = 0; i < n; ++i) {
-        rate += 1;
-        tmp *= rate;
+        tmp *= rate + 1;
     }
     deposit = capital * tmp;
     printf("%lf", deposit);
