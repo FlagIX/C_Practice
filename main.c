@@ -87,26 +87,6 @@ void question4_4()
     printf("%c %d", result, (int) result);
 }
 
-void question4_4_ext()
-{
-    char input;
-    scanf_s("%c", &input);
-    int inputAscii = (int) input;
-    char result;
-    if ((inputAscii >= (int) 'a' && inputAscii <= (int) 'z'))
-    {
-        result = (char) (inputAscii - ' ');
-    } else if ((inputAscii >= (int) 'A' && inputAscii <= (int) 'Z'))
-    {
-        result = (char) (inputAscii + ' ');
-    } else
-    {
-        printf("The input is not a English letter!");
-        return;
-    }
-    printf("%c %d", result, (int) result);
-}
-
 void question5_1()
 {
     double num;
@@ -184,6 +164,23 @@ void question5_6()
         printf("%d is not a leap year!\n", year);
 }
 
+void question5_7()
+{
+    char input;
+    scanf_s("%c", &input);
+    int inputAscii = (int) input;
+    char result = input;
+    if ((inputAscii >= (int) 'a' && inputAscii <= (int) 'z'))
+    {
+        result = (char) (inputAscii - ' ');
+    }
+    if ((inputAscii >= (int) 'A' && inputAscii <= (int) 'Z'))
+    {
+        result = (char) (inputAscii + ' ');
+    }
+    printf("%c %d", result, (int) result);
+}
+
 int main()
 {
 //    question3_2();
@@ -192,10 +189,11 @@ int main()
 //    question3_5();
 //    question3_5_2();
 //    question4_4();
-//    question4_4_ext();
+//    question5_7();
 //    question5_1();
 //    question5_2();
 //    question5_3();
 //    question5_4();
-    question5_6();
+//    question5_6();
+    question5_7();
 }
