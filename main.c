@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include<math.h>
 
 void question3_2()
 {
@@ -34,7 +35,6 @@ void question3_3()
     printf("%lf", deposit);
 }
 
-#include<math.h>
 void question3_4()
 {
     int a, b, c;
@@ -44,6 +44,7 @@ void question3_4()
 }
 
 #define PI 3.1415926
+
 void question3_5()
 {
     int r;
@@ -67,11 +68,25 @@ void question3_5_2()
     printf("v=%lf, s=%lf", v, s);
 }
 
+void question4_4()
+{
+    char input;
+    scanf_s("%c", &input);
+    int inputAscii = (int) input;
+    if (inputAscii < (int)'a' || inputAscii > (int)'z') {
+        printf("The input is not a lowercase English letter!");
+        return;
+    }
+    char result = (char)(inputAscii - ' ');
+    printf("%c %d", result, (int)result);
+}
+
 int main()
 {
 //    question3_2();
 //    question3_3();
 //    question3_4();
-    question3_5();
+//    question3_5();
 //    question3_5_2();
+    question4_4();
 }
