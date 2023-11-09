@@ -145,6 +145,33 @@ void question5_3()
     printf("%lf", sqrt(p * (p - a) * (p - b) * (p - c)));
 }
 
+void question5_4()
+{
+    double deposit;
+    double rate = 0;
+    double capital = 0;
+    int n = 0;
+    scanf_s("%lf%d", &capital, &n);
+    if (n >= 8)
+    {
+        rate = 0.0300;
+    } else if (n >= 5)
+    {
+        rate = 0.0288;
+    } else if (n >= 3)
+    {
+        rate = 0.0270;
+    } else if (n >= 2)
+    {
+        rate = 0.0243;
+    } else if (n >= 1)
+    {
+        rate = 0.0225;
+    }
+    deposit = capital + capital * rate;
+    printf("%lf", deposit);
+}
+
 int main()
 {
 //    question3_2();
@@ -156,5 +183,6 @@ int main()
 //    question4_4_ext();
 //    question5_1();
 //    question5_2();
-    question5_3();
+//    question5_3();
+    question5_4();
 }
