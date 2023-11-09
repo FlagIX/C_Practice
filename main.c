@@ -197,6 +197,24 @@ void question5_8()
         printf("Other");
 }
 
+void question5_9()
+{
+    int score;
+    scanf_s("%d", &score);
+    char grade;
+    if (score >= 90 && score <= 100)
+        grade = 'A';
+    if (score >= 80 && score < 90)
+        grade = 'B';
+    if (score >= 70 && score < 80)
+        grade = 'C';
+    if (score >= 60 && score < 70)
+        grade = 'D';
+    if (score >= 0 && score < 60)
+        grade = 'E';
+    printf("%c", grade);
+}
+
 int main()
 {
 //    question3_2();
@@ -212,5 +230,6 @@ int main()
 //    question5_4();
 //    question5_6();
 //    question5_7();
-    question5_8();
+//    question5_8();
+    question5_9();
 }
