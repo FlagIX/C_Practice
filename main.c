@@ -172,6 +172,18 @@ void question5_4()
     printf("%lf", deposit);
 }
 
+void question5_6()
+{
+    int year, flag;
+    printf("Enter year:");
+    scanf_s("%d", &year);
+    flag = ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) ? 1 : 0;
+    if (flag)
+        printf("%d is a leap year!\n", year);
+    else
+        printf("%d is not a leap year!\n", year);
+}
+
 int main()
 {
 //    question3_2();
@@ -184,5 +196,6 @@ int main()
 //    question5_1();
 //    question5_2();
 //    question5_3();
-    question5_4();
+//    question5_4();
+    question5_6();
 }
