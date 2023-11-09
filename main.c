@@ -181,6 +181,22 @@ void question5_7()
     printf("%c %d", result, (int) result);
 }
 
+void question5_8()
+{
+    char input;
+    scanf_s("%c", &input);
+    if (input >= '0' && input <= '9')
+        printf("Number");
+    else if (input >= 'A' && input <= 'Z')
+        printf("Uppercase letters");
+    else if (input >= 'a' && input <= 'z')
+        printf("Lowercase letters");
+    else if (input == ' ')
+        printf("Space");
+    else
+        printf("Other");
+}
+
 int main()
 {
 //    question3_2();
@@ -195,5 +211,6 @@ int main()
 //    question5_3();
 //    question5_4();
 //    question5_6();
-    question5_7();
+//    question5_7();
+    question5_8();
 }
