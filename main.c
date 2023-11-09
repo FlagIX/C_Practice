@@ -87,6 +87,26 @@ void question4_4()
     printf("%c %d", result, (int) result);
 }
 
+void question4_4_ext()
+{
+    char input;
+    scanf_s("%c", &input);
+    int inputAscii = (int) input;
+    char result;
+    if ((inputAscii >= (int) 'a' && inputAscii <= (int) 'z'))
+    {
+        result = (char) (inputAscii - ' ');
+    } else if ((inputAscii >= (int) 'A' && inputAscii <= (int) 'Z'))
+    {
+        result = (char) (inputAscii + ' ');
+    } else
+    {
+        printf("The input is not a English letter!");
+        return;
+    }
+    printf("%c %d", result, (int) result);
+}
+
 void question5_1()
 {
     double num;
@@ -112,6 +132,19 @@ void question5_2()
     }
 }
 
+void question5_3()
+{
+    int a, b, c;
+    scanf_s("%d%d%d", &a, &b, &c);
+    if (a + b <= c)
+    {
+        printf("Cannot form a triangle.");
+        return;
+    }
+    double p = (double) (a + b + c) / 2;
+    printf("%lf", sqrt(p * (p - a) * (p - b) * (p - c)));
+}
+
 int main()
 {
 //    question3_2();
@@ -120,6 +153,8 @@ int main()
 //    question3_5();
 //    question3_5_2();
 //    question4_4();
+//    question4_4_ext();
 //    question5_1();
-    question5_2();
+//    question5_2();
+    question5_3();
 }
