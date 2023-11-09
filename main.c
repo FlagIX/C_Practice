@@ -39,7 +39,8 @@ void question3_4()
 {
     int a, b, c;
     scanf_s("%d%d%d", &a, &b, &c);
-    if (b * b - 4 * a * c <= 0) {
+    if (b * b - 4 * a * c <= 0)
+    {
         printf("Do not meet the conditions: b^2-4ac > 0");
         return;
     }
@@ -77,12 +78,38 @@ void question4_4()
     char input;
     scanf_s("%c", &input);
     int inputAscii = (int) input;
-    if (inputAscii < (int)'a' || inputAscii > (int)'z') {
+    if (inputAscii < (int) 'a' || inputAscii > (int) 'z')
+    {
         printf("The input is not a lowercase English letter!");
         return;
     }
-    char result = (char)(inputAscii - ' ');
-    printf("%c %d", result, (int)result);
+    char result = (char) (inputAscii - ' ');
+    printf("%c %d", result, (int) result);
+}
+
+void question5_1()
+{
+    double num;
+    scanf_s("%lf", &num);
+    printf("%lf", num < 0 ? -num : num);
+}
+
+void question5_2()
+{
+    int num;
+    scanf_s("%d", &num);
+    int n = num % 2;
+    if (n < 0)
+    {
+        n = -n;
+    }
+    if (n > 0)
+    {
+        printf("%d is an odd number", num);
+    } else
+    {
+        printf("%d is an even number", num);
+    }
 }
 
 int main()
@@ -92,5 +119,7 @@ int main()
 //    question3_4();
 //    question3_5();
 //    question3_5_2();
-    question4_4();
+//    question4_4();
+//    question5_1();
+    question5_2();
 }
