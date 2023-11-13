@@ -117,7 +117,7 @@ void question5_3()
         printf("Cannot form a triangle.");
         return;
     }
-    double p = (double) (a + b + c) / 2;
+    double p = (a + b + c) / 2.0;
     printf("%lf", sqrt(p * (p - a) * (p - b) * (p - c)));
 }
 
