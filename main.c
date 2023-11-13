@@ -112,7 +112,7 @@ void question5_3()
 {
     int a, b, c;
     scanf_s("%d%d%d", &a, &b, &c);
-    if (a + b <= c)
+    if (a + b <= c || b + c <= a || c + a <= b)
     {
         printf("Cannot form a triangle.");
         return;
