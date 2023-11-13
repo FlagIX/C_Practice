@@ -99,11 +99,7 @@ void question5_2()
     int num;
     scanf_s("%d", &num);
     int n = num % 2;
-    if (n < 0)
-    {
-        n = -n;
-    }
-    if (n > 0)
+    if (n != 0)
     {
         printf("%d is an odd number", num);
     } else
