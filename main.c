@@ -425,9 +425,150 @@ void question6_7()
 void question6_8()
 {
     double PI;
-    for()
+
 }
 
+
+
+void question6_10()
+{
+    int i;
+    int a,b,c;
+    for(i=0;i<=999;i++)
+    {
+        a = i/100;
+        b = i%100/10;
+        c = i%10;
+        if(i == a*a*a+b*b*b+c*c*c)
+        {
+            printf("%d\n",i);
+        }
+    }
+
+}
+
+
+void question6_11()
+{
+    int n,m;
+    printf("请输入一个值");
+    scanf_s("%d",&n);
+
+}
+
+
+void question6_12()
+{
+    int a;
+    int b;
+    int c;
+    printf("请输入一些正数\n");
+    scanf_s("%d%d%d",&a,&b,&c);
+    if(a<=0||b<=0||c<=0)
+    {
+        printf("输入数据结束");
+        return;
+    }
+    printf("%d",a+b+c);
+}
+
+
+void question6_13()
+{
+    int a,b,c;
+    printf("请输入一些数\n");
+    scanf_s("%d%d%d",&a,&b,&c);
+    if(a==0||b==0||c==0)
+    {
+        printf("输入数据错误");
+        return;
+    }
+    if(a<0)
+    {
+        a=0;
+    }
+    if(b<0)
+    {
+        b=0;
+    }
+    if(c<0)
+    {
+        c=0;
+    }
+    printf("%d",a+b+c);
+}
+
+void question6_14()//穷举法=嵌套循环
+{
+    int a,b,c;
+    int sum;
+    for(a=0;a<=30;a++)
+    {
+        for(b=0;b<=30;b++)
+        {
+            for(c=0;c<=30;c++)
+            {
+                if(a+b+c==30&&3*a+2*b+c==50)
+                {
+                    printf("男人有%d人女人有%d人小孩有%d人\n",a,b,c);
+                }
+            }
+        }
+    }
+
+}
+
+void question6_15()
+{
+    int x,y;
+    for(x=0;x<=98;x++)
+    {
+        for(y=0;y<=98;y++)
+        {
+            if(y+x==98&&2*x+4*y==386)
+            {
+                printf("鸡有%d只兔有%d只\n",x,y);
+            }
+        }
+    }
+}
+
+void question6_16()
+{
+    int x,y,z;
+    for(x=0;x<=100;x++)
+    {
+        for(y=0;y<=100;y++)
+        {
+            for(z=0;z<=100;z++)
+            {
+                if(x+y+z==100&&5*x+3*y+z/3.0==100)
+                {
+                    printf("公鸡有%d只母鸡有%d只小鸡有%d只\n",x,y,z);
+                }
+            }
+        }
+    }
+}
+
+void question6_17()
+{
+    int x,y,z;
+    for(x=1;x<50;x++)
+    {
+        for(y=1;y<50;y++)
+        {
+            for(z=1;z<50;z++)
+            {
+                if(x+y+z==50&&10*x+5*y+z==100)
+                {
+
+                    printf("十元有%d张\n五元有%d张\n一元有%d张\n",x,y,z);
+                }
+            }
+        }
+    }
+}
 int main()
 {
 //     question3_2();
@@ -451,6 +592,14 @@ int main()
     //question6_5();
     //question6_6();
     //question6_7();
-    question6_8();
+    //question6_8();
+    //question6_10();
+    //question6_11();
+    //question6_12();
+    //question6_13();
+    //question6_14();
+    //question6_15();
+    //question6_16();
+    question6_17();
     return 0;
 }
