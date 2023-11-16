@@ -54,9 +54,9 @@ void question3_5()
 {
     int r;
     scanf_s("%d", &r);
-    // 浣撶НV=(4/3)蟺r^3
+    // 体积V=(4/3)πr^3
     double v = (4.0 / 3.0) * PI * r * r * r;
-    // 琛ㄩ潰绉疭=4蟺r^2
+    // 表面积S=4πr^2
     double s = 4.0 * PI * r * r;
     printf("v=%lf, s=%lf", v, s);
 }
@@ -66,11 +66,19 @@ void question3_5_2()
     const double const_PI = 3.1415926;
     int r;
     scanf_s("%d", &r);
-    // 浣撶НV=(4/3)蟺r^3
+    // 体积V=(4/3)πr^3
     double v = (4.0 / 3.0) * const_PI * r * r * r;
-    // 琛ㄩ潰绉疭=4蟺r^2
+    // 表面积S=4πr^2
     double s = 4.0 * const_PI * r * r;
     printf("v=%lf, s=%lf", v, s);
+}
+
+void question4_3()
+{
+    char a, b;
+    int c;
+    scanf_s("%c%c%d", &a, &b, &c);
+    printf("%c,%c,%d\n", a, b, c);
 }
 
 void question4_4()
@@ -160,22 +168,47 @@ void question5_6()
         printf("%d is not a leap year!\n", year);
 }
 
+//void question5_7()
+//{
+//    char input;
+//    scanf_s("%c", &input);
+//    int inputAscii = (int) input;
+//    char result = input;
+//    if ((inputAscii >= (int) 'a' && inputAscii <= (int) 'z'))
+//    {
+//        result = (char) (inputAscii - ' ');
+//    }
+//    if ((inputAscii >= (int) 'A' && inputAscii <= (int) 'Z'))
+//    {
+//        result = (char) (inputAscii + ' ');
+//    }
+//    printf("%c %d", result, (int) result);
+//}
+
 void question5_7()
 {
-    char input;
-    scanf_s("%c", &input);
-    int inputAscii = (int) input;
-    char result = input;
-    if ((inputAscii >= (int) 'a' && inputAscii <= (int) 'z'))
+    char a;
+    scanf_s("%c", &a);
+    int b = (int) a;
+    char result = a;
+    if (b <= 122 && b >= 97)
     {
-        result = (char) (inputAscii - ' ');
-    }
-    if ((inputAscii >= (int) 'A' && inputAscii <= (int) 'Z'))
+        result = (char) (b - ' ');
+    } else if (b >= 65 && b <= 90)
     {
-        result = (char) (inputAscii + ' ');
+        result = (char) (b + ' ');
     }
+//    if (b >= (int) 'a' && b <= (int) 'z')
+//    {
+//        result = (char) (b - ' ');
+//    }
+//    else if (b >= (int) 'A' && b <= (int) 'Z')
+//    {
+//        result = (char) (b + ' ');
+//    }
     printf("%c %d", result, (int) result);
 }
+
 
 void question5_8()
 {
@@ -211,6 +244,25 @@ void question5_9()
     printf("%c", grade);
 }
 
+void question6_8()
+{
+    double sum = 0;
+    double limit = 1.0 / (10 * 10 * 10 * 10);   // 10^-4
+    double i = 1;   // 累加时的每一项的绝对值，第一项为1，所以初始值设为1
+    int j = 1;      // 累加时的每一项的分母，第一项分母为1，所以初始值设为1
+    int count = 0;  // 统计累加的项数的变量
+    while (1)
+    {
+        if (i < limit)   // (i < 0 ? -i : i) 取每一项的绝对值 当满足条件：直到最后一项的绝对值小于10^-4时为止 时跳出循环
+            break;
+        sum += i * (count % 2 == 0 ? 1 : -1);   // sum累加 (count % 2 == 0 ? 1 : -1) 奇数项为负数，累加项绝对值乘以-1  偶数项为正数，累加项绝对值乘以1
+        j += 2;         // 每一项的分母是前一项的分母+2
+        i = 1.0 / j;    // 计算下一项的绝对值
+        count++;        // 累加的项数+1
+    }
+    printf("PI的近似值是%lf, 累加项数是%d", sum * 4, count);
+}
+
 int main()
 {
 //    question3_2();
@@ -218,6 +270,7 @@ int main()
 //    question3_4();
 //    question3_5();
 //    question3_5_2();
+//    question4_3();
 //    question4_4();
 //    question5_7();
 //    question5_1();
@@ -227,5 +280,6 @@ int main()
 //    question5_6();
 //    question5_7();
 //    question5_8();
-    question5_9();
+//    question5_9();
+    question6_8();
 }
