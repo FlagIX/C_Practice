@@ -426,15 +426,14 @@ void question6_7_yzj()
 {
     double num = 1000000;
     double rate = 0;
-    int year = 0;
+    int year;
     printf("请输入产值增长率\n");
     scanf_s("%lf", &rate);
-    while (num < 2000000)
+    for (year = 0; num < 2000000; year++)
     {
         num *= (1 + rate);
-        year++;
     }
-    printf("%d年后可实现翻番",year);
+    printf("%d年后可实现翻番", year);
 }
 
 void question6_8()
