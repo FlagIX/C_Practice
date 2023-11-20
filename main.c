@@ -422,6 +422,21 @@ void question6_7()
     printf("%d年后可实现翻番",year);
 }
 
+void question6_7_yzj()
+{
+    double num = 1000000;
+    double rate = 0;
+    int year = 0;
+    printf("请输入产值增长率\n");
+    scanf_s("%lf", &rate);
+    while (num < 2000000)
+    {
+        num *= (1 + rate);
+        year++;
+    }
+    printf("%d年后可实现翻番",year);
+}
+
 void question6_8()
 {
     double PI;
@@ -609,7 +624,8 @@ int main()
     //question6_4();
     //question6_5();
     //question6_6();
-    //question6_7();
+//    question6_7();
+    question6_7_yzj();
     //question6_8();
     //question6_10();
     //question6_11();
@@ -618,6 +634,6 @@ int main()
     //question6_14();
     //question6_15();
     //question6_16();
-    question6_17();
+//    question6_17();
     return 0;
 }
