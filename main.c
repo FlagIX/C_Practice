@@ -431,7 +431,7 @@ void question6_7_yzj()
     scanf_s("%lf", &rate);
     for (year = 0; num < 2000000; year++)
     {
-        num *= (1 + rate);
+        num = num * (1 + rate);
     }
     printf("%d年后可实现翻番", year);
 }
