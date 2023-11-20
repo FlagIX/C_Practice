@@ -486,6 +486,23 @@ void question6_12()
     printf("%d",a+b+c);
 }
 
+void question6_12_yzj()
+{
+    long sum = 0;
+    printf("请输入一些数：\n");
+    while (1)
+    {
+        int input = 0;
+        scanf_s("%ld", &input);
+        if (input <= 0)
+        {
+            printf("输入负数或零，结束！");
+            break;
+        }
+        sum += input;
+    }
+    printf("正数和是%ld", sum);
+}
 
 void question6_13()
 {
@@ -520,12 +537,15 @@ void question6_13_yzj()
     {
         int input = 0;
         scanf_s("%ld", &input);
-        if (input <= 0)
+        if (input == 0)
         {
-            printf("输入负数或零，结束！");
+            printf("输入零，结束！");
             break;
         }
-        sum += input;
+        if (input > 0)
+        {
+            sum += input;
+        }
     }
     printf("正数和是%ld", sum);
 }
@@ -623,8 +643,10 @@ int main()
     //question6_4();
     //question6_5();
     //question6_6();
+    question6_6_yzj();
+    question6_6_1();
 //    question6_7();
-    question6_7_yzj();
+//    question6_7_yzj();
     //question6_8();
     //question6_10();
     //question6_11();
